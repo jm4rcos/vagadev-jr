@@ -1,0 +1,188 @@
+.header{
+  width: 100%;
+  position: relative;
+}
+
+nav{
+  width: 100%;
+  height: 35px;
+  background: none;
+  color: #fff;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  
+  position: absolute;
+  top: 4%;
+  margin-top: 2%;
+}
+
+nav div{
+  display: flex;
+  justify-content:center;
+  align-items: center;
+  height: 100%;
+}
+.logo{
+  margin-left: 2rem;
+  cursor: pointer;
+}
+
+.menu{
+  background: transparent;
+  filter: invert(100%);
+}
+
+.menu div:before{
+  content: "";
+  height: 3px;
+  width: 30px;
+
+  position: absolute;
+  margin-top: 7.45px;
+}
+
+ul{
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+a{
+  text-decoration: none;
+  color: #fff;
+  position: relative;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.separator{
+  height: 30px;
+  width: 1px;
+  background: #fff;
+  margin: 1rem;
+}
+
+.searchIcon, .shoppingBag, .paperPlane{
+  filter: invert(100%);
+  cursor: pointer;
+}
+
+.banner{
+  width: 100%;
+  position: absolute;
+  top: 0;
+}
+
+.background{
+  position: absolute;
+  max-width: 100%;
+  height: auto;
+
+  z-index: -10;
+}
+
+.banner .info{
+  position: absolute;
+
+  max-width: 420px;
+  left: 47.5%;
+  margin-top: 25vh;
+
+  text-align: end;
+}
+
+.banner .info .title{
+  color: #fff;
+}
+
+.banner .info .price{
+  color: var(--blue);
+  font-size: 70px;
+}
+.banner .info .price sup{
+  font-size: 28px;
+}
+
+.banner .info p{
+  color: #fff;
+  font-size: 1rem;
+}
+
+.switchDiv{
+  height: 52px;
+  width: 375px;
+  position: absolute;
+
+  background: var(--blue);
+  
+  left: calc(90vw - 50px);
+  transform: translate(-50%, 0);
+
+  color: #fff;
+  font-weight: 400;
+
+  border-bottom-right-radius: 1rem;
+  transform: rotate(90deg);
+
+  display: flex;
+  align-items: center;
+  justify-content:space-between;
+  overflow: hidden;
+}
+
+.switchDiv .line{
+  width: 77px;
+  height: 1px;
+  background: #fff;
+}
+.switchDiv .bottom{
+  background: var(--dark-blue);
+  height: 100%;
+  width: 84px;
+
+  display: flex;
+  align-items: center;
+  justify-content:center; 
+}
+.bottom > p{
+  transform: rotate(269deg);
+}
+
+.switchDiv .arrows{
+  display: flex;
+  gap: 10px;
+  transform: rotate(269deg);
+}
+.switchDiv .arrows .left, .right{
+  background: none;
+  filter: invert(100%);
+  cursor: pointer;
+}
+
+@media (max-width: 700px){
+  nav{
+    justify-content: space-between;
+    padding: 0 1rem;
+  }
+  .separator{
+    display: none;
+  }
+  ul a{
+    display: none
+  }
+  ul img{
+    margin-left: 1rem;
+  }
+  .logo{
+    transform: scale(0.8);
+    margin-left: 1rem;
+  }
+}
