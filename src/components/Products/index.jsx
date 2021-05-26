@@ -14,6 +14,9 @@ import { featured } from '../services/data'
 const Products = () => {
   const [select, setSelect] = useState()
   const [currentProduct, setCurrentProduct] = useState(0)
+  const { setShowModal, setAddItem, addItem, size } = useContext(Context)
+
+  let coinAudio = new Audio('/coin.m4a')
 
   function nextProduct(){
     setCurrentProduct(currentProduct >= featured.length - 1 ? 0 : currentProduct +1)
@@ -22,11 +25,6 @@ const Products = () => {
     setCurrentProduct(currentProduct === 0 ? featured.length - 1 : currentProduct -1)
   }
 
-  console.log(currentProduct);
-
-  const { setShowModal, setAddItem, addItem, size } = useContext(Context)
-
-  let coinAudio = new Audio('/coin.m4a')
 
   const PlayCoin = () => {
     coinAudio.play()

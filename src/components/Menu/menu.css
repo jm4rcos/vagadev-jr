@@ -1,13 +1,21 @@
+.mainMenu{
+  position: absolute;
+  width: 68%;
+  height: auto;
+}
+
 .menuContainer{
   z-index: 100;
-  margin-left: -32vw;
   background: var(--dark-blue);
   height: 13rem;
   width: 30rem;
-  position: absolute;
+  position: relative;
   border: 2px solid var(--blue);
   border-radius: 5px;
-  top: 150%;
+  margin: 9% auto;
+  color: #fff;
+  display: flex;
+  padding: 1.5rem 0 0 0;
 
   box-shadow: 8px 8px var(--blue);
 }
@@ -40,10 +48,6 @@
   position: relative;
 }
 
-.menuContainer ul:nth-child(3){
-  margin-top: -14%;
-}
-
 .menuContainer ul li{
   list-style: none;
   color: #fff;
@@ -65,40 +69,66 @@
   cursor: pointer;
 }
 
-@media (max-width: 850px){
-  .menuContainer{
-    margin-left: -10vw;
-    background: var(--dark-blue);
-    height: 13rem;
-    width: 30rem;
-    position: absolute;
-    border: 2px solid var(--blue);
-    border-radius: 5px;
-    top: 150%;
-  
-    box-shadow: 8px 8px var(--blue);
-  }
+
+.menuContainer .closeMenu{
+  display: none;
 }
 
+/* Menu Mobile ---------------------------------------- */
+
 .menuMobile{
-  /* z-index: 50;
-  margin-left: -32vw;
+  position: relative;
+  z-index: 100;
   background: var(--dark-blue);
-  height: 100%;
-  width: 10vw;
-  position: fixed;
-  border: 2px solid var(--blue);
-  border-radius: 5px;
-  top: 150%;
 
-  box-shadow: 8px 8px var(--blue); */
-  position: fixed;
-  z-index: 50;
+  width: 100vw;
+  height: 250vh;
+  color: #fff;
 
-  width: 100%;
-  height: 100%;
-  background: rgba(8, 65, 84, 0.62);
   display: flex;
-  place-content: center;
-  align-items: center;
+  flex-direction: column;
+  padding: 35% 2rem;
+  align-items: flex-start;
+}
+
+.menuMobile ul{
+  flex-direction: column;
+  align-items: flex-start;
+  position: relative;
+}
+
+.menuMobile ul li{
+  list-style: none;
+  color: #fff; 
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21.9px;
+  padding:  0;
+  cursor: pointer;
+}
+
+.menuMobile ul li:hover{
+  background: var(--blue);
+  border-radius: .1px;
+  box-shadow: 0 0 0 7.5px var(--blue);
+  width: 84vw;
+}
+
+.menuMobile ul label{
+  font-weight: 700;
+  font-size: 24px;
+  cursor: pointer;
+}
+.menuMobile > span{
+  width: 84vw;
+  height: 1px;
+  background: #062C38;
+  bottom: 0;
+  margin: 1rem 0;
+}
+
+@media (max-width: 360px){
+  .menuMobile{
+    width: 105vw;
+  }
 }

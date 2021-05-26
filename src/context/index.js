@@ -6,8 +6,10 @@ const DataProps = {
   addItem: Number,
   size: Number,
   showMenu: Boolean,
+  menuSize: String,
   openModal: () => {},
-  setMenu: () => {}
+  setMenu: () => {},
+  desktopMenu: Boolean
 }
 
 export const Context = createContext(DataProps)

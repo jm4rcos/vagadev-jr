@@ -6,6 +6,7 @@ import Footer from './components/Footer'
 
 import Modal from './components/Modal'
 import {Context} from './context'
+import Menu from './components/Menu'
 
 import './global.css'
 
@@ -32,11 +33,14 @@ function App() {
   }, [setSize, size])
 
   return (
-    <Context.Provider value={{showModal, setShowModal, setModal, addItem, setAddItem, size, setShowMenu, showMenu}}>
-      {showModal && <Modal/>}
-      <Header/>
-      <Products/>
-      <Footer/>
+  <Context.Provider value={{showModal, setShowModal, setModal, addItem, setAddItem, size, setShowMenu, showMenu}}>
+      <div>
+        {showModal && <Modal/>}
+        {showMenu && <Menu/>}
+        <Header/>
+        <Products/>
+        <Footer/>
+      </div>
     </Context.Provider>
   )
 }

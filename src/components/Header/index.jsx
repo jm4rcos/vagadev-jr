@@ -1,5 +1,4 @@
-/* eslint-disable jsx-a11y/anchor-is-valid */
-import React, { useState, useEffect, useContext } from 'react'
+import React, { useState, useContext } from 'react'
 import { BannerSliderData } from '../Slider/SliderData'
 import { Context } from '../../context'
 import { Hamburguer, logo, paperPlane, searchIcon, shoppingBag } from '../../svgs'
@@ -8,17 +7,19 @@ import leftArrow from '../../svgs/angle-left-solid.svg'
 import rightArrow from '../../svgs/angle-right-solid.svg'
 
 import './header.css'
-import Menu from '../Menu'
 
 const Header = () => {
   const [currentBackground, setCurrentBackground] = useState(0)
   const { addItem, size, setShowMenu, showMenu } = useContext(Context)
 
-  const destopWidth = BannerSliderData[currentBackground].desktop
-  const mobileWidth = BannerSliderData[currentBackground].mobile
-
   function openMenu(){
     setShowMenu(true)
+
+    setShowMenu(!showMenu)
+  }
+
+  function closeMenu(){
+    setShowMenu(false)
   }
 
   return(<div className='header'>
@@ -26,16 +27,25 @@ const Header = () => {
     src={size <= 650 ? BannerSliderData[currentBackground].mobile : BannerSliderData[currentBackground].desktop} 
     alt="" draggable={false} 
     className='background'/>
-    
-    <nav>
+
+    <nav style={{zIndex:'1000'}}>
       <div>
-        <button className='menu' onClick={openMenu}>
-          <img src={Hamburguer} alt="" />
-        </button>
+
+        {showMenu ? (
+          <button className='closeMenu'
+          onClick={closeMenu}>
+            <img src='/close.svg' alt=''/>
+          </button>
+        )
+        :
+        (
+          <button className='menu' onClick={openMenu}>
+            <img src={Hamburguer} alt="" />
+          </button>
+        )}
+        
         <img src={logo} alt="" draggable={false} className='logo'/>
       </div>
-
-      {showMenu && (<Menu/>)}
 
       <ul>
         <img src={paperPlane} alt="Contact" className='paperPlane'/>
@@ -54,22 +64,37 @@ const Header = () => {
     </nav>
 
     <div className='info'>
-      <h1 className='title'>MORTAL KOMBAT</h1>
+      <h1 className='title'>
+        {currentBackground === 0 ? 'MORTAL KOMBAT': 'RED DEAD REDEMPTION 2'}
+      </h1>
       <h1 className='price'>R$ 299<sup>,99</sup></h1>
-      <p>
-      Mortal Kombat X combina uma apresentação cinemática única 
-      com uma jogabilidade totalmente nova. Os jogadores podem
-      escolher pela primeira vez diversas variantes de cada 
-      personagem, afetando tanto a estratégia como o estilo de 
-      luta.
-      </p>
+      
+      {currentBackground === 0 ? (
+        <p>
+        Mortal Kombat X combina uma apresentação cinemática única 
+        com uma jogabilidade totalmente nova. Os jogadores podem
+        escolher pela primeira vez diversas variantes de cada 
+        personagem, afetando tanto a estratégia como o estilo de 
+        luta.
+        </p>
+      )
+      :
+      (
+        <p>
+          Sinta-se no velho oeste, a ambientação do game tenta trazer
+          aos players uma imersão a época que o jogo se passa, utilize seus revólveres, 
+          monte em seu cavalo e explore as cidades, florestas, lagos, fazendas e muitas 
+          outras coisas presentes emRed Dead Redemption 2.
+        </p>
+      )}
+
     </div>
 
     <div className='switchDiv'>
-      <span className='sideSpan'>MORTAL KOMBAT</span>
+      <span className='sideSpan'>{currentBackground === 0 ? 'MORTAL KOMBAT' : 'RED DEAD REDEMPTION'}</span>
       <span className='line'></span>
       <div className='bottom'>
-        <p>1/2</p>
+        <p>{currentBackground +1}/2</p>
         <div className='arrows'>
           <button className='left' onClick={() => setCurrentBackground(0)}>
             <img src={leftArrow} alt="" />
