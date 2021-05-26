@@ -1,0 +1,312 @@
+.products{
+  height: auto;
+  width: 100%;
+  background: none;
+  position: relative;
+  margin-top: -50px;
+}
+
+.products .main{
+  width: 100%;
+  height: auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 8.75rem;
+  gap: 20px;
+}
+
+.products .main .card1, .card2{
+  width: 30.5%;
+  height: 20vw;
+  position: relative;
+  background: #fff;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  overflow: hidden;
+}
+
+.mainImage{
+  max-width: 100%;
+  height: 100%;
+}
+
+.mainCardInfo{
+  position: absolute;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background: var(--blue);
+  bottom: 0;
+
+  height: 40px;
+  width: 100%;
+  border-left: 10px solid var(--dark-blue);
+  color: var(--dark-blue);
+  
+}
+
+.mainCardInfo p{
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.mainCardInfo .line{
+  width: 35%;
+  height: 1px;
+  background: var(--dark-blue);
+}
+
+.featuredProjects{
+  background: #fff;
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
+
+.featuredProjects .featuredProjectsTitle{
+  color: var(--dark-blue);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: -50%;
+  margin-top: -5rem;
+  margin-bottom: 3.5rem;  
+}
+
+.featuredProjects .featuredCards .featuredCardsInfo{
+  margin-left: 1.7rem;
+}
+
+.featuredProjects .featuredCards{
+  display: flex;
+  align-items: center;
+  place-content: center;
+  gap: 1.5rem;
+  justify-content: center;
+}
+
+.featuredProjects .featuredCards > div{
+  overflow: hidden;
+  width: 20%;
+  height: 30vw;
+  padding-top: 20px;
+  padding-bottom: 0px;
+
+  background: #FFFFFF;
+  box-shadow: 0px 4px 20px 7px rgba(0, 0, 0, 0.07);
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+}
+
+.featuredProjects .featuredCards div > img{
+  width: auto;
+  height: 100%;
+  overflow: hidden;
+}
+
+.featuredCardInfo{
+  width: 100%;
+  height: 10rem;
+  background: #F5F5F5;
+  position: relative;
+  padding: 20px;
+  display: flex;
+  gap: .5rem;
+  flex-direction: column;
+  justify-content: center;
+  text-align: start;
+}
+
+/* Mobile ---------------------------------------------------------------*/
+
+.featuredProjects .featuredCards > .cardMobile{
+  overflow: hidden;
+  width: 40%;
+  height: 60vw;
+  padding-top: 20px;
+  padding-bottom: 0px;
+
+
+  background: #FFFFFF;
+  box-shadow: 0px 4px 20px 7px rgba(0, 0, 0, 0.07);
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+}
+
+.featuredCardInfoMobile{
+  width: 100%;
+  height: 10rem;
+  background: #F5F5F5;
+  position: relative;
+  padding: 20px;
+  display: flex;
+  gap: .5rem;
+  flex-direction: column;
+  justify-content: center;
+  text-align: start;
+}
+
+.btn{
+  background: var(--blue);
+  width: 100%;
+  height: 3rem;
+  color: #fff;
+  font-weight: 900;
+  font-size: 1rem;
+  align-items: center;
+  border-radius: .5rem; 
+}
+.btnBought{
+  background: var(--dark-blue);
+  width: 100%;
+  height: 3rem;
+  color: #fff;
+  font-weight: 900;
+  font-size: 1rem;
+  align-items: center;
+  justify-content: flex-start;
+  padding-left: 20%;
+  border-radius: .5rem; 
+  position: relative;
+}
+
+.left, .right{
+  background: none;
+}
+.arrowRight{
+  filter: invert(100%);
+}
+.arrowLeft{
+  width: 26px;
+}
+
+/* .arrowLeft, .arrowRight{
+  background: none;
+  height: 27px;
+  width: 15px;
+}
+
+.arrowLeft{
+  height: 27px;
+  width: 15px;
+}
+ */
+
+.marioBtn{
+  position: absolute;
+  width: 68px;
+  height: 79px;
+  bottom: 0;
+  background: none;
+  right: 0;
+  animation: popMario 1s  ease-out forwards;
+}
+@keyframes popMario{
+  0%{
+    height: 20px;
+  }
+  100%{
+    height: 79px;
+  }
+}
+
+
+
+.featuredCardInfo > p{
+  font-size: 14px;
+  color: var(--dark-blue);
+  width: 100%;
+  text-overflow: ellipsis;
+}
+.cardPrice{
+  font-size: 18px;
+  color: var(--dark-blue);
+}
+
+.featuredCardInfo:before{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -10px;
+  width: 110%;
+  height: 2px;
+  background: var(--blue);
+}
+
+@media (max-width: 1250px){
+  .mainCardInfo p{
+    font-size: 10px;
+  }
+
+  .mainCardInfo .line{
+    width: 30%;
+    height: 1px;
+    background: var(--dark-blue);
+  }
+  
+}
+
+@media (max-width: 1000px){
+  .mainCardInfo .line{
+    width: 20%;
+  }
+}
+
+@media (max-width: 850px){
+  .products .main{
+    width: 100%;
+    height: 100%;
+    
+    margin-top: 50px;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 25px 19px;
+  }
+  .products .main .card1, .card2{
+    width: 50%;
+    height: 15rem;
+  }
+  .mainCardInfo p{
+    font-size: 10px;
+  }
+  
+  .mainCardInfo .line{
+    width: 30%;
+    height: 1px;
+  }
+
+  .featuredProjects .featuredProjectsTitle > p{
+    margin-left: 1rem;
+  }
+}
+
+@media (max-width: 650px){
+  .products .main{
+    
+    margin-top: 50px;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 25px 0px;
+  }
+  .products .main .card1, .card2{
+    width: 20rem;
+    height: 13rem;
+  }
+}

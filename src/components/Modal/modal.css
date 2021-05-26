@@ -1,0 +1,61 @@
+.modal{
+  position: fixed;
+  z-index: 100;
+
+  width: 100%;
+  height: 100%;
+  background: rgba(8, 65, 84, 0.62);
+  display: flex;
+  place-content: center;
+  align-items: center;
+}
+.container{
+  width: 20rem;
+  height: 400px;
+  background: #fff;
+
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content:center;
+  text-align: center;
+  border-radius: 5px;
+}
+.container .mario{
+  position: absolute;
+  width: 217px;
+  height: 219px;
+  bottom: 0;
+}
+.container > p{
+  margin-bottom: 100px;
+  font-size: 24px;
+  width: 200px;
+
+  position: relative;
+}
+.container p:after{
+  content: '';
+  height: 1px;
+  width: 50px;
+  right: -60px;
+  background: black;
+  position: absolute;
+  top: 40%;
+}
+.container p:before{
+  content: '';
+  height: 1px;
+  width: 50px;
+  left: -60px;
+  background: black;
+  position: absolute;
+  top: 40%;
+}
+
+.container .close{
+  position: absolute;
+  top: .745rem;
+  right: .745rem;
+}
