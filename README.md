@@ -1,70 +1,38 @@
-# Getting Started with Create React App
+# Avaliação Front-End JR N1 #
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Leia atentamente até o final.
 
-## Available Scripts
+Nossa avaliação tem como foco analisar como o candidato no desevolvimento do front-end da página proposta.
+Avaliamos qualidade de código, versionamento, uso de automatizadores, uso de preprocessadores e javascript(vanilla, jquery ou react).
 
-In the project directory, you can run:
+*OBS.: Evite bootstrap e outros similares, pois queremos avaliar o seu código na implementação dos itens.*
 
-### `yarn start`
+Link do layout a ser desenvolvido: https://www.figma.com/file/Jgjk8tdDaQ4nHFHgQuNTLL/Avalia%C3%A7%C3%A3o-Front-end-JR.?node-id=0%3A1
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### 01 - O Básico a ser executado para concorrer a vaga ###
+* Fork o repositório e inicie o desevolvimento;
+* Atenção para responsividade. 
+Note que no repositório existe uma pasta src com alguns assets(Caso necessário, pois já tem tudo no figma). A fonte usada no layout é "Roboto", uma fonte google.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+Finalizando esses itens você terá terminado a etapa 01 da avaliação.
 
-### `yarn test`
+*OBS.: Interações e funcionalidades não sugeridas no layout serão levadas em consideração. Atenção aos detalhes do layout.*
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### 02 - Elementos de interação ###
+* O banner prinicipal é do tipo slider e possui uma navegação na direita, no crop de desktop, e abaixo do banner, no crop de mobile. Precisamos que ao navegar o nome e a páginação nessa área sejam atualizados. *OBS.: Você não precisa fazer o slider do zero. Utilize plugins como Slick, Owl carousel ou qualquer outro para fazer esse item do projeto*.
 
-### `yarn build`
+* Menu. Sempre que clicarmos/ou no hover no ícone de menu hamburguer precisamos exibir o menu.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+* Quando usuário clicar no botão de comprar na prateleira precisamos que exiba o lightbox de produto adicionado e o botão de compra deve ficar sinalizado como item comprado.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+* **PLUS:** Junto com a ação de exibição do lightbox atualize a quantidade de itens na sacola presente na direita header.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Finalizando esses itens você terá terminado a etapa 02 da avaliação.
 
-### `yarn eject`
+### EXTRA ###
+* Se você chegou até aqui você já é bem top! Essa etapa é um extra, e um diferencial para quem quiser se descatar. Note que no header existe elementos sem interação. Como contato e busca. Desenvolva uma solução para um desses elementos.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+*OBS. 01: O candidato esta livre para trabalhar com a estrutura e tecnologia que preferir, exceto bootstrap e similares.*
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+*OBS. 02: Finalizando a prova envie o link do fork para o e-mail: rafael.augusto@agencian1.com.br.*
