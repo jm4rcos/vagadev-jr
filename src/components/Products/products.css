@@ -91,9 +91,8 @@
 .featuredProjects .featuredCards > div{
   overflow: hidden;
   width: 20%;
-  height: 30vw;
-  padding-top: 20px;
-  padding-bottom: 0px;
+  height: 60vh;
+  padding: 0px 0px;
 
   background: #FFFFFF;
   box-shadow: 0px 4px 20px 7px rgba(0, 0, 0, 0.07);
@@ -112,6 +111,7 @@
   width: auto;
   height: 100%;
   overflow: hidden;
+  padding: 20px;
 }
 
 .featuredCardInfo{
@@ -308,5 +308,38 @@
   .products .main .card1, .card2{
     width: 20rem;
     height: 13rem;
+  }
+
+  .featuredProjects .featuredCards > .cardMobile{
+    width: 50%;
+    height: 65vh;
+    padding-top: 0px;
+    padding-bottom: 0px;
+  }
+}
+
+@media (max-width: 480px){
+
+  .featuredProjects .featuredCards > .cardMobile{
+    width: 50%;
+    height: 60vh;
+    padding: 0;
+  }
+
+  .featuredCardInfoMobile{
+    width: 100%;
+    height: 10rem;
+    padding: 10px;
+  }
+  
+  .btn{
+    height: 2.5rem;
+  }
+  .btnBought{
+    height: 2.5rem;
+  }
+
+  .featuredProjects .featuredProjectsTitle{
+    margin-left: -30%;
   }
 }
